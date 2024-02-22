@@ -7,6 +7,7 @@ function App() {
   const [todo, setTodo] = useState({id: 0, title: "", description: ""})
   const [todoArr, setTodoArr] = useState([])
 
+
   const handleChange = ({target}) => setTodo({...todo, [target.name]: target.value})
   
   const addTask = (e)=>{
