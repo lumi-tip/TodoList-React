@@ -11,8 +11,10 @@ function App() {
   
   const addTask = (e)=>{
     e.preventDefault()
-    setTodoArr([...todoArr, {...todo, id: todoArr.length + 1}])
-    setTodo({id: 0, title: "", description: ""})
+    if(todo.title != ""){
+      setTodoArr([...todoArr, {...todo, id: todoArr.length + 1}])
+      setTodo({id: 0, title: "", description: ""})
+    }
   }
 
   const deleteTask = (key)=>{
